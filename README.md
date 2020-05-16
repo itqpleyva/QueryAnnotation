@@ -1,5 +1,5 @@
 # NamedQueryExample
-Example of the use of @NamedQuery
+Example of the use of @Query
 
 <p>In this example, a database ("example_mysql") is created based on Msql</p>
 
@@ -19,9 +19,9 @@ Example of the use of @NamedQuery
 
 <p>One query is defined in the StudentInterface repository</p>
 
-  @Query("select u from User u where u.firstname = :firstname or u.lastname = :lastname")
-  User findByLastnameOrFirstname(@Param("lastname") String lastname,
-                                 @Param("firstname") String firstname);
+	  @Query("select u from User u where u.firstname = :firstname or u.lastname = :lastname")
+	  User findByLastnameOrFirstname(@Param("lastname") String lastname,
+					 @Param("firstname") String firstname);
 
 <p>This query is used in the controller class (StudentController)</p>
 
